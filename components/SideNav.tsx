@@ -1,11 +1,11 @@
-import React from 'react';
-import {useRouter} from 'next/router';
-import Link from 'next/link';
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const items = [
   {
-    title: 'Get started',
-    links: [{href: '/docs', children: 'Overview'}],
+    title: "NFT API",
+    links: [{ href: "/docs", children: "Quickstart" }],
   },
 ];
 
@@ -21,7 +21,7 @@ export function SideNav() {
             {item.links.map((link) => {
               const active = router.pathname === link.href;
               return (
-                <li key={link.href} className={active ? 'active' : ''}>
+                <li key={link.href} className={active ? "active" : ""}>
                   <Link {...link} />
                 </li>
               );

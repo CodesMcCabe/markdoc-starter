@@ -1,11 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "../public/alchemy-logo.png";
 
-export function TopNav({children}) {
+export function TopNav({ children }) {
   return (
     <nav>
       <Link href="/" className="flex">
-        Home
+        <Image src={logo} alt="logo" width={100} />
+        &nbsp; Docs
       </Link>
       <section>{children}</section>
       <style jsx>
